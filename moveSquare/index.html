@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>移动的小方块</title>
+</head>
+<style>
+    div {
+        width: 120px;
+        height: 120px;
+        background-color: red;
+        transition: all 1s;
+        position: absolute;
+        left: 30px;
+        top: 30px;
+        color: white;
+        font-size: 14px;
+        line-height: 120px;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+    }
+</style>
+
+<body>
+    <div id="square">点击我会随便移动</div>
+    <script>
+        document.querySelector("#square").onclick = function () {
+            this.style.left = Math.random() * 1000 + "px";
+            this.style.top = Math.random() * 500 + "px";
+        };
+    </script>
+</body>
+
+</html>
